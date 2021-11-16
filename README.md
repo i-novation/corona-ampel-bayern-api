@@ -1,5 +1,7 @@
 # Corona Ampel Bayern API
 
+Informationen über die API der Seite [Corona Ampel Bayern](corona-ampel-bayern.de)
+
 ## Ampeldaten
 
 URL: [https://corona-ampel-bayern.de/data/data.json](https://corona-ampel-bayern.de/data/data.json)
