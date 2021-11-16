@@ -2,7 +2,7 @@
 
 ## Ampeldaten
 
-URL: `https://corona-ampel-bayern.de/data/data.json`
+URL: [https://corona-ampel-bayern.de/data/data.json](https://corona-ampel-bayern.de/data/data.json)
 
 ```json
 {
@@ -69,7 +69,9 @@ state | Status auf den umgeschalten wird
 
 ## Historie
 
-URL: `https://corona-ampel-bayern.de/data/history7days.json`
+URL 7 Tage Historie: [https://corona-ampel-bayern.de/data/history7days.json](https://corona-ampel-bayern.de/data/history7days.json)
+
+URL 14 Tage Historie: [https://corona-ampel-bayern.de/data/history14days.json](https://corona-ampel-bayern.de/data/history14days.json)
 
 ```json
 [
@@ -133,11 +135,9 @@ hospitalizationLast7DaysIncidence | Hospitalisierungsinzidenz der letzten 7 Tage
 currentIntensiveCarePatients | Aktuelle Covid Fälle in Intensivstationen in Bayern
 lastUpdate | Letzte Aktualisierung der Daten
 
-Diese API ist auf für die letzten 14 Tage verfügbar: `https://corona-ampel-bayern.de/data/history14days.json`
-
 ## Hotspots / Land oder Stadtkreisinformationen
 
-URL: `https://corona-ampel-bayern.de/data/districts.json`
+URL: [https://corona-ampel-bayern.de/data/districts.json](https://corona-ampel-bayern.de/data/districts.json)
 
 ```json
 [
