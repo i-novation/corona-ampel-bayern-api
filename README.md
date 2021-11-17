@@ -149,7 +149,11 @@ URL: [https://corona-ampel-bayern.de/data/districts.json](https://corona-ampel-b
     "county": "SK Ingolstadt",
     "weekIncidence": 530.11,
     "ilsName": "Leitstelle Ingolstadt",
+    "ilsBedsFree": 14,
+    "ilsBedsOccupied": 101,
     "ilsPercentOccupied": 87.83,
+    "ilsCurrentCovidCases": 28,
+    "ilsPercentCovidCases": 27.72,
     "ilsDate": "2021-11-16",
     "hasHotSpotCriteria": true,
     "hotSpotCriteria": {
@@ -168,8 +172,12 @@ name | Name
 county | Detailierter Name
 weekIncidence | Aktuelle 7 Tage Inzidenz
 ilsName | Name der zuständigen Leitstelle
-ilsPercentOccupied | Prozentuale Belegung der Intensivkapazität
-ilsDate | Datum des Intensivregistereintrags
+ilsBedsFree | Freie Intensivvetten der zugehörigen Leitstelle
+ilsBedsOccupied | Belegte Intensivvetten der zugehörigen Leitstelle
+ilsPercentOccupied | Prozentuale Belegung der Intensivkapazität der zugehörigen Leitstelle
+ilsCurrentCovidCases | Anzahl Covid-19 Patienten der zugehörigen Leitstelle
+ilsPercentCovidCases | Anteil Covid-19 Patienten der zugehörigen Leistelle
+ilsDate | Datum des Intensivregistereintrags der zugehörigen Leitstelle
 hasHotSpotCriteria | Sind Hotspotkriterien erfüllt?
 hotSpotCriteria | Welche der beiden Hotspotkriterien sind derzeit erfüllt
 
