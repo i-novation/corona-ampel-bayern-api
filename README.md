@@ -153,6 +153,8 @@ incidence | 7 Tage Inzidenz inkl. Nachmeldungen
 frozenHospitalization | Hospitalisierung ohne Nachmeldungen
 hospitalization | Hospitalisierung inkl Nachmeldungen
 
+Die alten Historien-URLs https://corona-ampel-bayern.de/data/history7days.json und https://corona-ampel-bayern.de/data/history14days.json werden weiterhin geschrieben, werden allerdings nicht mehr angepasst bzw. erweitert.
+
 ## Hotspots / Land oder Stadtkreisinformationen
 
 URL: [https://corona-ampel-bayern.de/data/districts.json](https://corona-ampel-bayern.de/data/districts.json)
