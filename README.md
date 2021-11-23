@@ -8,32 +8,34 @@ URL: [https://corona-ampel-bayern.de/data/data.json](https://corona-ampel-bayern
 
 ```json
 {
-    "hospitalizationLast7Days": 1019,
-    "hospitalizationLast7DaysIncidence": 7.75,
-    "lastUpdate": "2021-11-16T16:29:40.639Z",
-    "lastSync": "2021-11-16T16:29:39.026Z",
+    "hospitalizationLast7Days": 1248,
+    "hospitalizationLast7DaysIncidence": 9.5,
+    "lastUpdate": "2021-11-23T03:02:42.000Z",
+    "lastSync": "2021-11-23T21:00:00.729Z",
     "stateInfo": {
         "name": "Bayern",
         "population": 13140183,
-        "casesPerWeek": 72817,
-        "deathsPerWeek": 45,
-        "cases": 950702,
-        "deaths": 16648,
-        "recovered": 810704,
-        "weekIncidence": 554.1551438058359,
-        "casesPer100k": 7235.0742756017935,
+        "casesPerWeek": 84737,
+        "deathsPerWeek": 61,
+        "cases": 1040178,
+        "deaths": 17048,
+        "recovered": 860942,
+        "weekIncidence": 644.8692533429709,
+        "casesPer100k": 7916.008475681047,
         "delta": {
-            "cases": 9015,
-            "deaths": 77,
-            "recovered": 5913
+            "cases": 8624,
+            "deaths": 81,
+            "recovered": 9461
         }
     },
-    "currentIntensiveCarePatients": 814,
+    "currentIntensiveCarePatients": 961,
+    "currentIntensiveCareUpdateDate": "2021-11-23T20:05:00Z",
     "state": "red",
     "officialState": "red",
     "nextSwitch": null,
-    "yellowPercent": 180.9,
-    "redPercent": 135.7
+    "info": "Breaking Changes! Wavebreaker ...",
+    "yellowPercent": 213.6,
+    "redPercent": 160.2
 }
 ```
 
@@ -41,13 +43,15 @@ Feld | Beschreibung
 -------- | --------
 hospitalizationLast7Days | Neu hospitalisierte Covid Fälle der letzten 7 Tage in Bayern
 hospitalizationLast7DaysIncidence | Hospitalisierungsinzidenz der letzten 7 Tage in Bayern
-lastUpdate | Letzte Aktualisierung der Daten
+lastUpdate | Datenstand der Hospitalisierungsdaten
 lastSync | Letzter Abgleich der Daten mit Quellen
 stateInfo | Covid Zahlen in Bayern
 currentIntensiveCarePatients | Aktuelle Covid Fälle in Intensivstationen in Bayern
+currentIntensiveCareUpdateDate | Datenstand der Covid Fälle auf Intesiv
 state | Aktueller berechneter Status der Bayerischen Krankenhaus Ampel: `green`, `yellow`, `red`
 officialState | Derzeitiger offizieller Status der Bayerischen Krankenhaus Ampel: `green`, `yellow`, `red`
 nextSwitch | Info über geplantes Umschalten der Ampel (`null` wenn aktuell kein Umschalten geplant ist)
+info | Info Text, der über Änderungen informiert
 yellowPercent | Prozent des Schwellwerts von Stufe Gelb
 redPercent | Prozent des Schwellwerts von Stufe Rot
 
@@ -71,71 +75,83 @@ state | Status auf den umgeschalten wird
 
 ## Historie
 
-URL 7 Tage Historie: [https://corona-ampel-bayern.de/data/history7days.json](https://corona-ampel-bayern.de/data/history7days.json)
-
-URL 14 Tage Historie: [https://corona-ampel-bayern.de/data/history14days.json](https://corona-ampel-bayern.de/data/history14days.json)
+URL: [https://corona-ampel-bayern.de/data/history.json](https://corona-ampel-bayern.de/data/history.json)
 
 ```json
-[
-  {
-    "date": "2021-11-16",
-    "hospitalizationLast7Days": "1020",
-    "hospitalizationLast7DaysIncidence": "7.80",
-    "currentIntensiveCarePatients": "814",
-    "lastUpdate": "2021-11-16 14:00:06"
-  },
-  {
-    "date": "2021-11-15",
-    "hospitalizationLast7Days": "980",
-    "hospitalizationLast7DaysIncidence": "7.50",
-    "currentIntensiveCarePatients": "801",
-    "lastUpdate": "2021-11-15 13:15:05"
-  },
-  {
-    "date": "2021-11-14",
-    "hospitalizationLast7Days": "997",
-    "hospitalizationLast7DaysIncidence": "7.60",
-    "currentIntensiveCarePatients": "752",
-    "lastUpdate": "2021-11-14 17:15:05"
-  },
-  {
-    "date": "2021-11-13",
-    "hospitalizationLast7Days": "997",
-    "hospitalizationLast7DaysIncidence": "7.60",
-    "currentIntensiveCarePatients": "713",
-    "lastUpdate": "2021-11-13 17:00:06"
-  },
-  {
-    "date": "2021-11-12",
-    "hospitalizationLast7Days": "1000",
-    "hospitalizationLast7DaysIncidence": "7.60",
-    "currentIntensiveCarePatients": "680",
-    "lastUpdate": "2021-11-12 19:45:05"
-  },
-  {
-    "date": "2021-11-11",
-    "hospitalizationLast7Days": "955",
-    "hospitalizationLast7DaysIncidence": "7.30",
-    "currentIntensiveCarePatients": "683",
-    "lastUpdate": "2021-11-11 13:15:05"
-  },
-  {
-    "date": "2021-11-10",
-    "hospitalizationLast7Days": "957",
-    "hospitalizationLast7DaysIncidence": "7.30",
-    "currentIntensiveCarePatients": "654",
-    "lastUpdate": "2021-11-10 15:30:05"
-  }
-]
+{
+    "ilsHistory": [
+        {
+            "date": "2021-11-23",
+            "currentIntensiveCarePatients": "962",
+            "bedsFree": "298",
+            "bedsOccipued": "2887"
+        },
+        ...
+        {
+            "date": "2021-11-10",
+            "currentIntensiveCarePatients": "653",
+            "bedsFree": "283",
+            "bedsOccipued": "2821"
+        }
+    ],
+    "frozenIncidence": [
+        {
+            "weekIncidence": 644.8692533429709,
+            "date": "2021-11-23"
+        },
+        ...
+        {
+            "weekIncidence": 395.7859643202838,
+            "date": "2021-11-10"
+        }
+    ],
+    "incidence": [
+        {
+            "weekIncidence": 644.8692533429709,
+            "date": "2021-11-22"
+        },
+        ...
+        {
+            "weekIncidence": 431.0137842068105,
+            "date": "2021-11-09"
+        }
+    ],
+    "frozenHospitalization": [
+        {
+            "date": "2021-11-23",
+            "hospitalizationLast7Days": 1248,
+            "hospitalizationLast7DaysIncidence": 9.5
+        },
+        ...
+        {
+            "date": "2021-11-10",
+            "hospitalizationLast7Days": 957,
+            "hospitalizationLast7DaysIncidence": 7.3
+        }
+    ],
+    "hospitalization": [
+        {
+            "hospitalizationLast7Days": 1248,
+            "hospitalizationLast7DaysIncidence": 9.5,
+            "date": "2021-11-23"
+        },
+        ...
+        {
+            "hospitalizationLast7Days": 1751,
+            "hospitalizationLast7DaysIncidence": 13.33,
+            "date": "2021-11-10"
+        }
+    ]
+}
 ```
 
 Feld | Beschreibung
 -------- | --------
-date | Datum des Eintrags
-hospitalizationLast7Days | Neu hospitalisierte Covid Fälle der letzten 7 Tage in Bayern
-hospitalizationLast7DaysIncidence | Hospitalisierungsinzidenz der letzten 7 Tage in Bayern
-currentIntensiveCarePatients | Aktuelle Covid Fälle in Intensivstationen in Bayern
-lastUpdate | Letzte Aktualisierung der Daten
+ilsHistory | Historiendaten über Intensivauslastung
+frozenIncidence | 7 Tage Inzidenz ohne Nachmeldungen
+incidence | 7 Tage Inzidenz inkl. Nachmeldungen
+frozenHospitalization | Hospitalisierung ohne Nachmeldungen
+hospitalization | Hospitalisierung inkl Nachmeldungen
 
 ## Hotspots / Land oder Stadtkreisinformationen
 
@@ -143,24 +159,25 @@ URL: [https://corona-ampel-bayern.de/data/districts.json](https://corona-ampel-b
 
 ```json
 [
-  {
-    "ags": "09161",
-    "name": "Ingolstadt",
-    "county": "SK Ingolstadt",
-    "weekIncidence": 530.11,
-    "ilsName": "Leitstelle Ingolstadt",
-    "ilsBedsFree": 14,
-    "ilsBedsOccupied": 101,
-    "ilsPercentOccupied": 87.83,
-    "ilsCurrentCovidCases": 28,
-    "ilsPercentCovidCases": 27.72,
-    "ilsDate": "2021-11-16",
-    "hasHotSpotCriteria": true,
-    "hotSpotCriteria": {
-      "hasIncidenceCriteria": true,
-      "hasPercentOccupiedCriteria": true
-    }
-  },
+    {
+        "ags": "09161",
+        "name": "Ingolstadt",
+        "county": "SK Ingolstadt",
+        "weekIncidence": 600.21,
+        "ilsName": "Leitstelle Ingolstadt",
+        "ilsBedsFree": 11,
+        "ilsBedsOccupied": 108,
+        "ilsPercentOccupied": 90.76,
+        "ilsCurrentCovidCases": 35,
+        "ilsPercentCovidCases": 32.41,
+        "ilsDate": "2021-11-23",
+        "hasHotSpotCriteria": true,
+        "hotSpotCriteria": {
+            "hasIncidenceCriteria": true,
+            "hasPercentOccupiedCriteria": true
+        },
+        "hasWavebreakerHotSpotCriteria": false
+    },
   ...
 ]
 ```
@@ -180,9 +197,9 @@ ilsPercentCovidCases | Anteil Covid-19 Patienten der zugehörigen Leistelle
 ilsDate | Datum des Intensivregistereintrags der zugehörigen Leitstelle
 hasHotSpotCriteria | Sind Hotspotkriterien erfüllt?
 hotSpotCriteria | Welche der beiden Hotspotkriterien sind derzeit erfüllt
+hasWavebreakerHotSpotCriteria | Ist das Hotspotkriterium der Wellenbrechermaßnahmen erfüllt
 
 # Datenquellen von corona-ampel-bayern.de
 
-- [Baverisches Landesamt für Gesundheit und lebensmittelsicherheit](https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm)
 - [intensivregister.de](https://www.intensivregister.de/)
 - [api.corona-zahlen.org](https://api.corona-zahlen.org/)
